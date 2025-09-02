@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guia Git e GitHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f2f4f8;
+      color: #2c3e50;
+      padding: 20px;
+    }
+
+    header {
+      background: linear-gradient(to right, #24292e, #3f4c5c);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 10px;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: #0366d6;
+      margin-bottom: 10px;
+      border-left: 5px solid #0366d6;
+      padding-left: 10px;
+    }
+
+    section {
+      margin-bottom: 35px;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    ul, ol {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    code {
+      background-color: #e0e0e0;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.95em;
+    }
+
+    pre {
+      background-color: #f3f3f3;
+      padding: 15px;
+      border-left: 4px solid #0366d6;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.95em;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #24292e;
+      color: #ffffff;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guia Git e GitHub</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>O que é o Git</h2>
+      <p>O Git é um sistema de controle de versão distribuído. Ele permite que desenvolvedores acompanhem mudanças no código-fonte durante o desenvolvimento de software. É extremamente eficiente para trabalhar em equipe.</p>
+    </section>
+
+    <section>
+      <h2>O que é o GitHub</h2>
+      <p>O GitHub é uma plataforma de hospedagem de código-fonte que utiliza o Git. Ele facilita a colaboração entre desenvolvedores, oferecendo ferramentas para revisão de código, controle de versão e gerenciamento de projetos.</p>
+    </section>
+
+    <section>
+      <h2>Diferenças entre Git e GitHub</h2>
+      <ul>
+        <li><strong>Git</strong>: ferramenta local de controle de versões.</li>
+        <li><strong>GitHub</strong>: plataforma online que hospeda repositórios Git.</li>
+        <li>Você pode usar Git sem GitHub, mas não o contrário.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Principais comandos Linux para usar o Git Bash</h2>
+      <ul>
+        <li><code>ls</code>: lista arquivos e diretórios.</li>
+        <li><code>cd</code>: navega entre diretórios.</li>
+        <li><code>mkdir</code>: cria um novo diretório.</li>
+        <li><code>rm</code>: remove arquivos ou diretórios.</li>
+        <li><code>clear</code>: limpa o terminal.</li>
+        <li><code>touch</code>: cria um novo arquivo.</li>
+        <li><code>pwd</code>: mostra o caminho do diretório atual.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Comandos Linux do repositório <a href="https://github.com/caixetovisk/aula_git" target="_blank">aula_git</a></h2>
+      <ul>
+        <li><code>mkdir aula_git</code></li>
+        <li><code>cd aula_git</code></li>
+        <li><code>git init</code></li>
+        <li><code>touch index.html</code></li>
+        <li><code>git status</code></li>
+        <li><code>git add .</code></li>
+        <li><code>git commit -m "meu primeiro commit"</code></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Como criar um repositório no GitHub</h2>
+      <ol>
+        <li>Acesse <a href="https://github.com" target="_blank">github.com</a> e faça login.</li>
+        <li>Clique em "New" para criar um novo repositório.</li>
+        <li>Escolha um nome, visibilidade (público ou privado) e clique em "Create repository".</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Como ligar em um projeto existente na máquina</h2>
+      <ol>
+        <li>Abra o terminal na pasta do projeto.</li>
+        <li>Inicie o repositório com <code>git init</code>.</li>
+        <li>Adicione os arquivos com <code>git add .</code>.</li>
+        <li>Faça o commit inicial com <code>git commit -m "Primeiro commit"</code>.</li>
+        <li>Conecte ao GitHub com <code>git remote add origin &lt;url_do_repositório&gt;</code>.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Como gerar uma versão com git</h2>
+      <p>Para gerar uma versão (tag), utilize:</p>
+      <pre><code>git tag -a v1.0 -m "Versão 1.0"</code></pre>
+      <p>E envie para o GitHub com:</p>
+      <pre><code>git push origin v1.0</code></pre>
+    </section>
+
+    <section>
+      <h2>Como enviar da máquina para o GitHub</h2>
+      <ol>
+        <li>Verifique se o repositório está configurado: <code>git remote -v</code></li>
+        <li>Envie os commits com: <code>git push origin main</code></li>
+        <li>Se necessário, use <code>git branch -M main</code> para definir o nome da branch principal.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por <strong>Felipe Santos</strong></p>
+  </footer>
+</body>
+</html>
